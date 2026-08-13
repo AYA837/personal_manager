@@ -1,22 +1,12 @@
+
 import 'package:flutter/material.dart';
-import 'package:personal_manager/second_page.dart';
-
-//the page where the resuable codes are written
 import 'package:personal_manager/Widgets/widgets_page.dart';
- 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+import 'package:personal_manager/third_page.dart';
+//hello world
 
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
+class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
 
-//external functions need to be inside the class always remember that
-
-class _HomeScreenState extends State<HomeScreen> {
-  //to control the dimension of the stupid element we built
-  //everytime we press the button the width and height changes depending on what's inside the on pressed changes
- 
   Widget _WelcomeWidget(BuildContext context){
 
     return Container(
@@ -37,30 +27,30 @@ class _HomeScreenState extends State<HomeScreen> {
       
         children: [
             const SizedBox(height: 10,),
-             Text("Smartly Manage your "
+             Text("Manage Your Tasks  "
                ,style: MyStylings.getBlackTextStyle,
              ),
-               Text("Tasks "
+               Text("With Us Now "
                ,style: MyStylings.getBlackTextStyle,
              ),
 
              const SizedBox(height: 15,),
             Text("your ultimate app to organize"
-              , style: MyStylings.getLightTextStyle,
-            
-            ),
-               Text("your Work"
               ,style: MyStylings.getLightTextStyle,
             
             ),
+               Text("your Work"
+              ,style: MyStylings.getLightTextStyle),
+            
+            
 
             const SizedBox(height: 20),
             ElevatedButton(onPressed:(){
 
-               Navigator.push(
+              Navigator.push(
                   context,
                   MaterialPageRoute<void>(
-                    builder: (context) => SecondPage(),
+                    builder: (context) => const ThirdPage(),
                   ),
                 );
             },
@@ -73,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
               minimumSize: Size(200, 50),
               foregroundColor: Colors.white,
              ),
-               child:Text( "Next") ,
+               child:Text( "Get Started") ,
              )
 
         ],
@@ -83,8 +73,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     backgroundColor: Colors.pinkAccent,
-      body: Center(
+      backgroundColor: Colors.pinkAccent,
+
+      //we will be implmenting tween in this page
+      //tween animates according to a given  starting point and an ending point
+
+      body: 
+          Center(
         child: Column(
            children: [
               Spacer(flex: 2,),
@@ -93,11 +88,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
         ))
-    );
-  }
-
-
- 
-  
-  
+        
+        
+        );
+        
+        
+        
+}
+        
+        
+        
 }
