@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return TextStyle(
         fontSize: 15,
         fontWeight: FontWeight.w200,
-        fontFamily: ,
+        
         color: const Color.fromARGB(255, 69, 63, 63),
     );
   }
