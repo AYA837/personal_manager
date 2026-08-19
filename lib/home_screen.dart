@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:personal_manager/second_page.dart';
 
+import 'package:get/get.dart';
+
 //the page where the resuable codes are written
 import 'package:personal_manager/Widgets/widgets_page.dart';
  
@@ -56,13 +58,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
             ElevatedButton(onPressed:(){
+               Get.to(
 
-               Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (context) => SecondPage(),
-                  ),
-                );
+                ()=> const SecondPage(), 
+                 transition: Transition.downToUp,
+                 duration: const Duration(milliseconds: 1000),
+               );
             },
             
                
