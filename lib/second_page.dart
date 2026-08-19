@@ -47,13 +47,13 @@ class SecondPage extends StatelessWidget {
 
             const SizedBox(height: 20),
             ElevatedButton(onPressed:(){
+                Get.to(
+                     () => const ThirdPage(),
+                     transition: Transition.circularReveal,
+                     duration: const Duration(milliseconds: 1500),                
+                     );
 
-              Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (context) => const ThirdPage(),
-                  ),
-                );
+
             },
             
                
