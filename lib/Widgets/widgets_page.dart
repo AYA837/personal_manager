@@ -60,3 +60,67 @@ class MyWavedClipper extends CustomClipper<Path> {
   }
     
 }
+
+class FloatingText extends StatefulWidget {
+
+  final String text;
+  const FloatingText({super.key ,required  this.text});
+
+  @override
+  State<FloatingText> createState() => _FloatingTextState();
+}
+
+class _FloatingTextState extends State<FloatingText>
+    with SingleTickerProviderStateMixin {
+
+  late AnimationController controller;
+  late Animation<double> animation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    )..repeat(reverse: true);
+
+    animation = Tween<double>(
+      begin: 0,
+      end: -10,
+    ).animate(
+      CurvedAnimation(
+        parent: controller,
+        curve: Curves.easeInOut,
+      ),
+    );
+  }
+
+
+  //dispose will clean what the controller has created after done with animation
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: animation,
+      builder: (context, child) {
+        return Transform.translate(
+          offset: Offset(0, animation.value),
+          child: child,
+        );
+      },
+      child: const Text(
+        "Organize All in One",
+        style: TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+}

@@ -33,7 +33,15 @@ class _ThirdPageState extends State<ThirdPage> {
               width: 450,
               height: 450,
             ),
-           )
+           ),
+
+          Container(
+           // alignment: Alignment.center,
+            padding: EdgeInsets.fromLTRB(150, 500, 5, 10),
+            
+            
+            child: FloatingText(text: "Welcome",)), 
+            
         ],
       ),
       
