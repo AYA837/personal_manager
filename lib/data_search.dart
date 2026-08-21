@@ -30,9 +30,9 @@ class DataSearch extends SearchDelegate<String> {
     return IconButton(onPressed: (){
       Navigator.pop(context);
     },
-     icon: AnimatedIcon(icon: icon,
+     icon: AnimatedIcon(icon: AnimatedIcons.menu_arrow,
      
-      progress: progress
+      progress: transitionAnimation,
       
       ),
      
@@ -41,7 +41,9 @@ class DataSearch extends SearchDelegate<String> {
 
   @override
   Widget buildResults(BuildContext context) {
-    throw UnimplementedError();
+    return Center(
+      child: Text(query),// whenever the user tabs to search for sth that thing will be printed on the screen
+    );
   }
 
   @override
