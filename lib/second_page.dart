@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:personal_manager/Widgets/widgets_page.dart';
-import 'package:personal_manager/fourth_page.dart';
+import 'package:personal_manager/third_page.dart';
 import 'package:get/get.dart';
 //hello world
 
@@ -48,7 +48,7 @@ class SecondPage extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(onPressed:(){
                 Get.to(
-                     () => const FourthPage(),
+                     () => const ThirdPage(),
                      transition: Transition.circularReveal,
                      duration: const Duration(milliseconds: 1500),                
                      );
