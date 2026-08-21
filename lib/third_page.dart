@@ -30,8 +30,8 @@ class _ThirdPageState extends State<ThirdPage> {
 
             child: Container(
               color: Colors.pinkAccent,
-              width: 400,
-              height: 300,
+              width: 450,
+              height: 450,
             ),
            )
         ],
