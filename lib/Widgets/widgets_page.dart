@@ -135,8 +135,9 @@ class MyBackgroundPainter extends CustomPainter {
     Paint paint = Paint();
     paint.strokeWidth = 2;
     paint.color = const Color.fromARGB(255, 242, 148, 148);
+    Offset center = Offset(size.width/2 , size.height / 2);
 
-    canvas.
+    canvas.drawCircle(center, 10, paint);
   }
 
   @override
