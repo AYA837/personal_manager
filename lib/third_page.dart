@@ -21,11 +21,22 @@ class _ThirdPageState extends State<ThirdPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: Column(
 
         children: [
-           ClipPath(
+           Container(
+            margin: EdgeInsets.only(top: 100),
 
+             child: CustomPaint(
+              painter: MyBackgroundPainter(),
+              size: const Size(100 , 100),
+              
+             ),
+           ),
+
+            const SizedBox(height: 45,),
+          /* ClipPath(
+                
             clipper: MyWavedClipper(), //IT's defined in the re-usable widgets file
 
             child: Container(
@@ -34,10 +45,10 @@ class _ThirdPageState extends State<ThirdPage> {
               height: 450,
             ),
            ),
-
+           */
           Container(
            // alignment: Alignment.center,
-            padding: EdgeInsets.fromLTRB(150, 500, 5, 10),
+           // padding: EdgeInsets.fromLTRB(150, 500, 5, 10),
             
             
             child: FloatingText(text: "Welcome",)), 

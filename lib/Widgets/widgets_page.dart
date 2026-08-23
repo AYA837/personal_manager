@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//COMMUN TEXT STYLINGS AND DECORATIONS
+
 class MyStylings {
   
     static BoxDecoration mydecoration =  BoxDecoration(
@@ -60,6 +62,8 @@ class MyWavedClipper extends CustomClipper<Path> {
   }
     
 }
+
+//a CLASS FOR FLOATING TEXTS ANIMATIONS
 
 class FloatingText extends StatefulWidget {
 
@@ -123,4 +127,21 @@ class _FloatingTextState extends State<FloatingText>
       ),
     );
   }
+}
+
+class MyBackgroundPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    Paint paint = Paint();
+    paint.strokeWidth = 2;
+    paint.color = const Color.fromARGB(255, 242, 148, 148);
+
+    canvas.
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
+  }
+     
 }
