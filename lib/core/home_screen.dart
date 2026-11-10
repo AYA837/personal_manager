@@ -1,13 +1,24 @@
-
 import 'package:flutter/material.dart';
-import 'package:personal_manager/Widgets/widgets_page.dart';
-import 'package:personal_manager/third_page.dart';
+import 'package:personal_manager/core/second_page.dart';
+
 import 'package:get/get.dart';
-//hello world
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+//the page where the resuable codes are written
+import 'package:personal_manager/Widgets/widgets_page.dart';
+ 
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+//external functions need to be inside the class always remember that
+
+class _HomeScreenState extends State<HomeScreen> {
+  //to control the dimension of the stupid element we built
+  //everytime we press the button the width and height changes depending on what's inside the on pressed changes
+ 
   Widget _WelcomeWidget(BuildContext context){
 
     return Container(
@@ -28,32 +39,31 @@ class SecondPage extends StatelessWidget {
       
         children: [
             const SizedBox(height: 10,),
-             Text("Manage Your Tasks  "
+             Text("Smartly Manage your "
                ,style: MyStylings.getBlackTextStyle,
              ),
-               Text("With Us Now "
+               Text("Tasks "
                ,style: MyStylings.getBlackTextStyle,
              ),
 
              const SizedBox(height: 15,),
             Text("your ultimate app to organize"
-              ,style: MyStylings.getLightTextStyle,
+              , style: MyStylings.getLightTextStyle,
             
             ),
                Text("your Work"
-              ,style: MyStylings.getLightTextStyle),
+              ,style: MyStylings.getLightTextStyle,
             
-            
+            ),
 
             const SizedBox(height: 20),
             ElevatedButton(onPressed:(){
-                Get.to(
-                     () => const ThirdPage(),
-                     transition: Transition.circularReveal,
-                     duration: const Duration(milliseconds: 1500),                
-                     );
+               Get.to(
 
-
+                ()=> const SecondPage(), 
+                 transition: Transition.downToUp,
+                 duration: const Duration(milliseconds: 1000),
+               );
             },
             
                
@@ -64,7 +74,7 @@ class SecondPage extends StatelessWidget {
               minimumSize: Size(200, 50),
               foregroundColor: Colors.white,
              ),
-               child:Text( "Get Started") ,
+               child:Text( "Next") ,
              )
 
         ],
@@ -74,13 +84,8 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pinkAccent,
-
-      //we will be implmenting tween in this page
-      //tween animates according to a given  starting point and an ending point
-
-      body: 
-          Center(
+     backgroundColor: Colors.pinkAccent,
+      body: Center(
         child: Column(
            children: [
               Spacer(flex: 2,),
@@ -89,14 +94,11 @@ class SecondPage extends StatelessWidget {
 
 
         ))
-        
-        
-        );
-        
-        
-        
-}
-        
-        
-        
+    );
+  }
+
+
+ 
+  
+  
 }

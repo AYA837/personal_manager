@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:personal_manager/Dope_animations.dart';
-import 'package:personal_manager/home_screen.dart';
+import 'package:personal_manager/core/home_screen.dart';
 import 'package:get/get.dart';
 
 
