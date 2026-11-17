@@ -7,6 +7,8 @@ import 'package:get/get.dart';
 import 'package:personal_manager/Widgets/widgets_page.dart';
  
 class HomeScreen extends StatefulWidget {
+
+   static const String routeName =  '/home';
   const HomeScreen({super.key});
 
   @override
@@ -58,12 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
             ElevatedButton(onPressed:(){
-               Get.to(
-
-                ()=> const SecondPage(), 
-                 transition: Transition.downToUp,
-                 duration: const Duration(milliseconds: 1000),
-               );
+              Navigator.pushNamed(context , SecondPage.routeName);
             },
             
                

@@ -6,6 +6,8 @@ import 'package:intl/intl.dart';
 // hello world
 
 class ThirdPage extends StatefulWidget {
+
+  static const routeName = '/thirdPage';
   const ThirdPage({super.key});
 
   @override

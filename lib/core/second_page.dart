@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 //hello world
 
 class SecondPage extends StatelessWidget {
+  static const routeName = '/secondPage';
   const SecondPage({super.key});
 
   Widget _WelcomeWidget(BuildContext context){
@@ -47,12 +48,7 @@ class SecondPage extends StatelessWidget {
 
             const SizedBox(height: 20),
             ElevatedButton(onPressed:(){
-                Get.to(
-                     () => const ThirdPage(),
-                     transition: Transition.circularReveal,
-                     duration: const Duration(milliseconds: 1500),                
-                     );
-
+              Navigator.pushNamed(context , ThirdPage.routeName);
 
             },
             
