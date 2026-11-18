@@ -12,6 +12,7 @@ class FourthPage extends StatefulWidget {
 }
 
 class _FourthPageState extends State<FourthPage> {
+  final _myKey = GlobalKey<FormState>();
   DateTime todayDate = DateTime.now();
 
   String get formattedDate =>
@@ -21,6 +22,7 @@ class _FourthPageState extends State<FourthPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        key: _myKey,
         children: [
           Align(
             alignment: Alignment.topLeft,

@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
             ElevatedButton(onPressed:(){
-              Navigator.pushNamed(context , SecondPage.routeName);
+              Navigator.pushNamed(context , SecondPage.routeName , );
             },
             
                
